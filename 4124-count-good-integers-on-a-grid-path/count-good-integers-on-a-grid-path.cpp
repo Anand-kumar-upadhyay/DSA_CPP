@@ -27,7 +27,7 @@ return dp[i][tight][prev]=res;
 
         string s=to_string(r);;
         while(s.size()<16)s='0'+s;
-        cout<<s<<endl;
+     
         string t=to_string(l-1);
         while(t.size()<16)t='0'+t;
 
