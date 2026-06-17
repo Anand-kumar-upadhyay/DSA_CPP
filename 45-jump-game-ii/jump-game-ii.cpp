@@ -17,7 +17,7 @@ int func(int i,vector<int>&nums)
     return dp[i]=ans;
 }
     int jump(vector<int>& nums) {
-        dp.resize(nums.size()+2,-1);
+        dp.resize(nums.size()+1,-1);
         return func(0,nums); 
     }
 };
