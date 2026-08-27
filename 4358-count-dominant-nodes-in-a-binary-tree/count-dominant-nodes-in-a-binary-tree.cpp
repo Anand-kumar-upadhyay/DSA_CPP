@@ -23,10 +23,10 @@ class Solution {
         if(root->val>=max(l,r))
         {
             ans++;
-            return root->val;
+           
 
         }
-        return max(l,r);
+        return max({root->val,l,r});
         
     }
 public:
