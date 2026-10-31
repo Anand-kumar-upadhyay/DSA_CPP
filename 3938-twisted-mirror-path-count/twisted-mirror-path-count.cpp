@@ -3,7 +3,7 @@ public:
 
 #define mod 1000000007
 
-int func(int i,int j,int m,int n,vector<vector<int>> &grid,int dir,vector<vector<vector<int>>>&dp)
+int func(int i,int j,int m,int n,vector<vector<int>> &grid,int dir,int dp[][500][2])
 {
     if(i==m-1 && j==n-1)return 1;
     if(i<0||j<0||i>=m||j>=n)return 0;
@@ -30,9 +30,8 @@ int func(int i,int j,int m,int n,vector<vector<int>> &grid,int dir,vector<vector
 
         int n=grid[0].size();
 
-       vector<vector<vector<int>>>dp(
-    m, vector<vector<int>>(n, vector<int>(2, -1))
-);
+      int dp[500][500][2];
+      memset(dp,-1,sizeof(dp));
 
         return func(0,0,m,n,grid,0,dp);
     }
